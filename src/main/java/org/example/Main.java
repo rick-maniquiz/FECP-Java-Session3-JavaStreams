@@ -17,13 +17,13 @@ public class Main {
         List<String> names = List.of("Alice", "Adam", "Bob", "Angela", "Bryan");
         Predicate<String> startsWithA = s -> s.charAt(0) == 'A';
         List<String> namesThatStartsWithA = names.stream().filter(startsWithA).collect(Collectors.toList());
-        System.out.println("Odd numbers: " + namesThatStartsWithA.toString());
+        System.out.println("Names that starts with 'A': " + namesThatStartsWithA.toString());
         System.out.println("");
 
         System.out.println("=== Activity 3 ===");
         List<Integer> numbers1to5 = List.of(1, 2, 3, 4, 5);
         List<Integer> squareOfNumbers1to5 = numbers1to5.stream().map(n -> {return n*n;}).collect(Collectors.toList());
-        System.out.println("Odd numbers: " + squareOfNumbers1to5.toString());
+        System.out.println("Square of numbers 1 to 5: " + squareOfNumbers1to5.toString());
         System.out.println("");
 
         System.out.println("=== Activity 4 ===");
@@ -31,7 +31,7 @@ public class Main {
         Predicate<Integer> isGreaterThanFive = n -> n > 5;
         // Will use the same numbers1to10
         List<Integer> evenNumbersGreaterThan5 = numbers1to10.stream().filter(isEven.and(isGreaterThanFive)).collect(Collectors.toList());
-        System.out.println("Odd numbers: " + evenNumbersGreaterThan5.toString());
+        System.out.println("Even numbers greater than 5: " + evenNumbersGreaterThan5.toString());
         System.out.println("");
 
         System.out.println("=== Activity 5 ===");
